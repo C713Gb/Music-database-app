@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/albumId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album id: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/artistId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist id: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/albumSongName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album Song Name: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/albumSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No. of Songs: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/editAlbumSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Album Song"
+            android:textColor="@color/teal_200"
+            android:textSize="17sp"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginBottom="4dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

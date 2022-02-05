@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/artistId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist id: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist Name: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/artistAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist Age: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/artistSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist Sex: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/artistLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist Language: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/artistSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Songs Composed: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/editArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Artist"
+            android:textColor="@color/teal_200"
+            android:textSize="17sp"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginBottom="4dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Artists"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Artist"
+                    android:layout_alignParentEnd="true"
+                    android:textAllCaps="false"
+                    android:id="@+id/addArtistBtn"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/artistRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addArtistBtn"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/noArtistData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No data available"
+                    android:layout_below="@id/artistRV"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movie Songs"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Movie Song"
+                    android:layout_alignParentEnd="true"
+                    android:textAllCaps="false"
+                    android:id="@+id/addMovieSongBtn"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movieSongRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addMovieSongBtn"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/noMovieSongData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No data available"
+                    android:layout_below="@id/movieSongRV"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Album Songs"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Album Song"
+                    android:layout_alignParentEnd="true"
+                    android:textAllCaps="false"
+                    android:id="@+id/addAlbumSongBtn"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/albumSongRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addAlbumSongBtn"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/noAlbumSongData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No data available"
+                    android:layout_below="@id/albumSongRV"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Users"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/addUserBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Add User"
+                    android:textAllCaps="false" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/userRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addUserBtn"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/noUserData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No data available"
+                    android:layout_below="@id/userRV"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Playlists"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/addPlaylistBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Add Playlist"
+                    android:textAllCaps="false" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/playlistRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addPlaylistBtn"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/noPlaylistData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No data available"
+                    android:layout_below="@id/playlistRV"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Podcasters"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/addPodcasterBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Add Podcaster"
+                    android:textAllCaps="false" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/podcasterRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addPodcasterBtn"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/noPodcasterData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No data available"
+                    android:layout_below="@id/podcasterRV"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Podcasts"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/addPodcastBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Add Podcast"
+                    android:textAllCaps="false" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/podcastRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addPodcastBtn"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/noPodcastData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No data available"
+                    android:layout_below="@id/podcastRV"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

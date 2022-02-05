@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/podcasterId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podcaster id: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/podcasterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podcaster Name: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/podcasterAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podcaster Age: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/podcasterSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podcaster Sex: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/podcasterLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podcaster Language: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/editPodcaster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Podcaster"
+            android:textColor="@color/teal_200"
+            android:textSize="17sp"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginBottom="4dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
