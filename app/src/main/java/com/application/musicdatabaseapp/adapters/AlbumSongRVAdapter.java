@@ -66,7 +66,6 @@ public class AlbumSongRVAdapter extends RecyclerView.Adapter<AlbumSongRVAdapter.
             artistId.setText("Artist id: "+albumSongModel.getArt_id());
             albumId.setText("Album id: "+albumSongModel.getAlb_id());
             songName.setText("Album Song Name: "+albumSongModel.getName());
-            songs.setText("No. of Songs: "+Integer.toString(albumSongModel.getNo_of_songs()));
             duration.setText("Duration: "+Float.toString(albumSongModel.getDuration()));
 
             editAlbumSong.setOnClickListener(view -> {

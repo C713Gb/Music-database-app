@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.application.musicdatabaseapp.EditAlbumSongActivity;
+import com.application.musicdatabaseapp.EditUserActivity;
 import com.application.musicdatabaseapp.R;
 import com.application.musicdatabaseapp.models.AlbumSongModel;
 import com.application.musicdatabaseapp.models.UserModel;
@@ -74,7 +75,7 @@ public class UserRVAdapter extends RecyclerView.Adapter<UserRVAdapter.ViewHolder
                 Gson gson = new Gson();
                 String data = gson.toJson(userModel, UserModel.class);
 
-                Intent intent = new Intent(context, EditAlbumSongActivity.class);
+                Intent intent = new Intent(context, EditUserActivity.class);
                 intent.putExtra("user", data);
                 context.startActivity(intent);
             });

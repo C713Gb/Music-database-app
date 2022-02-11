@@ -63,7 +63,6 @@ public class MovieSongRVAdapter extends RecyclerView.Adapter<MovieSongRVAdapter.
             artistId.setText("Artist id: "+movieSongModel.getArt_id());
             movieId.setText("Movie id: "+movieSongModel.getMov_id());
             songName.setText("Movie Song name: "+movieSongModel.getName());
-            songs.setText("Songs composed: "+Integer.toString(movieSongModel.getNo_of_songs()));
             duration.setText("Duration: "+Float.toString(movieSongModel.getDuration()));
 
             editMovieSong.setOnClickListener(view -> {

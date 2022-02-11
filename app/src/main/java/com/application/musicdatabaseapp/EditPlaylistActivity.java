@@ -1,7 +1,5 @@
 package com.application.musicdatabaseapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,27 +7,52 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.application.musicdatabaseapp.db.DatabaseHelper;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class AddPlaylistActivity extends AppCompatActivity {
+import com.application.musicdatabaseapp.db.DatabaseHelper;
+import com.application.musicdatabaseapp.models.PlaylistModel;
+import com.google.gson.Gson;
+
+public class EditPlaylistActivity extends AppCompatActivity {
 
     private DatabaseHelper databaseHelper;
 
     private EditText playlistId, userId, playlistName, songs, duration;
-    private Button addPlaylist;
+    private Button editPlaylist, deletePlaylist;
     public static final String TAG = "ABCD";
+    private PlaylistModel playlistModel = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_playlist);
+        setContentView(R.layout.activity_edit_playlist);
 
         initialize();
 
+        if (getIntent() != null){
+            if (getIntent().hasExtra("playlist")){
+                String data = getIntent().getStringExtra("playlist");
+                Gson gson = new Gson();
+                playlistModel = gson.fromJson(data, PlaylistModel.class);
+            }
+        }
+
         databaseHelper = new DatabaseHelper(this);
 
-        addPlaylist.setOnClickListener(v -> {
-            addPlaylistToDB();
+        if (playlistModel != null){
+            playlistId.setText(playlistModel.getPlaylist_id());
+            userId.setText(playlistModel.getUser_id());
+            playlistName.setText(playlistModel.getName());
+            songs.setText(Integer.toString(playlistModel.getNo_of_songs()));
+            duration.setText(Float.toString(playlistModel.getDuration()));
+        }
+
+        editPlaylist.setOnClickListener(v -> {
+            editPlaylistToDB();
+        });
+
+        deletePlaylist.setOnClickListener(v -> {
+            deletePlaylistFromDB();
         });
 
         findViewById(R.id.backBtn).setOnClickListener(v -> {
@@ -37,7 +60,22 @@ public class AddPlaylistActivity extends AppCompatActivity {
         });
     }
 
-    private void addPlaylistToDB() {
+    private void deletePlaylistFromDB() {
+        String id = playlistId.getText().toString().trim();
+
+        if (TextUtils.isEmpty(id)){
+            playlistId.setError("Enter Playlist id");
+            playlistId.requestFocus();
+            return;
+        }
+
+        databaseHelper.deletePlaylist(id);
+
+        startActivity(new Intent(EditPlaylistActivity.this, MainActivity.class));
+        finish();
+    }
+
+    private void editPlaylistToDB() {
         String id = playlistId.getText().toString().trim();
 
         if (TextUtils.isEmpty(id)){
@@ -62,7 +100,7 @@ public class AddPlaylistActivity extends AppCompatActivity {
             }
         }
 
-        boolean result = databaseHelper.insertPlaylist(
+        int result = databaseHelper.updatePlaylist(
                 id,
                 userId.getText().toString().trim(),
                 playlistName.getText().toString().trim(),
@@ -70,12 +108,12 @@ public class AddPlaylistActivity extends AppCompatActivity {
                 numDur
         );
 
-        if (result){
-            startActivity(new Intent(AddPlaylistActivity.this, MainActivity.class));
+        if (result == 1){
+            startActivity(new Intent(EditPlaylistActivity.this, MainActivity.class));
             finish();
         }
         else{
-            Toast.makeText(this, "Failed to add playlist", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Failed to update playlist", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -86,6 +124,7 @@ public class AddPlaylistActivity extends AppCompatActivity {
         playlistName = findViewById(R.id.playlistNameTxt);
         songs = findViewById(R.id.NoSongsTxt);
         duration = findViewById(R.id.DurationTxt);
-        addPlaylist = findViewById(R.id.addPlaylistBtn);
+        editPlaylist = findViewById(R.id.editPlaylistBtn);
+        deletePlaylist = findViewById(R.id.deletePlaylistBtn);
     }
 }

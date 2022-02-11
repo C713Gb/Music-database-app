@@ -8,9 +8,17 @@
         <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_add_album_song.xml" value="0.25416666666666665" />
         <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_add_artist.xml" value="0.25416666666666665" />
         <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_add_movie_song.xml" value="0.25025641025641027" />
+        <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_add_playlist.xml" value="0.24010416666666667" />
+        <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_add_podcast.xml" value="0.24010416666666667" />
+        <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_add_podcaster.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_add_user.xml" value="0.25416666666666665" />
         <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_edit_album_song.xml" value="0.25416666666666665" />
         <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_edit_artist.xml" value="0.25416666666666665" />
         <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_edit_movie_song.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_edit_playlist.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_edit_podcast.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_edit_podcaster.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_edit_user.xml" value="0.25416666666666665" />
         <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/album_song_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Android projects/Musicdatabaseapp/app/src/main/res/layout/artist_item.xml" value="0.25416666666666665" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddPlaylistActivity">
+    tools:context=".EditPlaylistActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Playlist"
+                android:text="Edit Playlist"
                 android:layout_gravity="center_vertical"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -186,11 +186,23 @@
                     android:singleLine="true"/>
 
                 <Button
-                    android:id="@+id/addPlaylistBtn"
+                    android:id="@+id/editPlaylistBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Add Playlist"
+                    android:text="Edit Playlist"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="40dp"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:id="@+id/deletePlaylistBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Delete Playlist"
                     android:textSize="16sp"
                     android:textAllCaps="false"
                     android:paddingStart="40dp"

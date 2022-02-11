@@ -166,19 +166,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
         addUserBtn.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AddAlbumSongActivity.class));
+            startActivity(new Intent(MainActivity.this, AddUserActivity.class));
         });
 
         addPlaylistBtn.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AddAlbumSongActivity.class));
+            startActivity(new Intent(MainActivity.this, AddPlaylistActivity.class));
         });
 
         addPodcasterBtn.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AddAlbumSongActivity.class));
+            startActivity(new Intent(MainActivity.this, AddPodcasterActivity.class));
         });
 
         addPodcastBtn.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AddAlbumSongActivity.class));
+            startActivity(new Intent(MainActivity.this, AddPodcastActivity.class));
         });
 
     }
@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
         addUserBtn = findViewById(R.id.addUserBtn);
         addPlaylistBtn = findViewById(R.id.addPlaylistBtn);
         addPodcasterBtn = findViewById(R.id.addPodcasterBtn);
-        addPodcastBtn = findViewById(R.id.addPodcasterBtn);
+        addPodcastBtn = findViewById(R.id.addPodcastBtn);
     }
 
     private void displayMessage(String message){
